@@ -6,7 +6,7 @@
 
 An end-to-end supervised learning project that classifies whether a property is a **Good Investment** and forecasts its **price after 5 years** — with MLflow experiment tracking and a premium, theme-aware Streamlit app.
 
-**[Live App →](real-estate-investment-advisor-app.streamlit.app)**
+**[Live App →](https://real-estate-investment-advisor-app.streamlit.app/)**
 
 </div>
 
