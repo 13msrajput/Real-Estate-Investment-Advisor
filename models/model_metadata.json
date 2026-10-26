@@ -1,0 +1,297 @@
+{
+  "trained_at": "2026-10-25T14:07:12+00:00",
+  "dataset": {
+    "rows": 250000,
+    "good_investment_share": 0.31484,
+    "train_rows": 200000,
+    "test_rows": 50000
+  },
+  "cleaning_report": {
+    "rows_raw": 250000,
+    "duplicates_removed": 0,
+    "rows_dropped_missing_key_fields": 0,
+    "cells_imputed": 0,
+    "rows_dropped_invalid_values": 0,
+    "age_values_corrected": 0,
+    "floor_values_corrected": 116304,
+    "rows_clean": 250000
+  },
+  "features": {
+    "numeric": [
+      "BHK",
+      "Size_in_SqFt",
+      "Price_in_Lakhs",
+      "Price_per_SqFt_Capped",
+      "Age_of_Property",
+      "Total_Floors",
+      "Floor_Ratio",
+      "Size_per_BHK",
+      "Nearby_Schools",
+      "Nearby_Hospitals",
+      "School_Density_Score",
+      "Transport_Score",
+      "Parking_Flag",
+      "Security_Flag",
+      "Amenity_Count",
+      "Has_Gym",
+      "Has_Pool",
+      "Has_Clubhouse",
+      "Has_Garden",
+      "Has_Playground",
+      "Infra_Score",
+      "PPS_vs_City_Median",
+      "Price_vs_City_Median",
+      "Is_Under_Construction",
+      "City_Demand_Index"
+    ],
+    "categorical": [
+      "City",
+      "Property_Type",
+      "Furnished_Status",
+      "Facing",
+      "Owner_Type"
+    ]
+  },
+  "classification": {
+    "results": {
+      "Logistic Regression": {
+        "accuracy": 0.88136,
+        "precision": 0.7662577353164695,
+        "recall": 0.896709439715411,
+        "f1": 0.8263669359559771,
+        "roc_auc": 0.958454689626073,
+        "confusion_matrix": [
+          [
+            29952,
+            4306
+          ],
+          [
+            1626,
+            14116
+          ]
+        ],
+        "train_f1": 0.8301647655259823
+      },
+      "Random Forest": {
+        "accuracy": 0.969,
+        "precision": 0.9157000585823082,
+        "recall": 0.9929487993901664,
+        "f1": 0.9527611849323419,
+        "roc_auc": 0.998048187244669,
+        "confusion_matrix": [
+          [
+            32819,
+            1439
+          ],
+          [
+            111,
+            15631
+          ]
+        ],
+        "train_f1": 0.9605530703538023
+      },
+      "XGBoost": {
+        "accuracy": 0.99692,
+        "precision": 0.9929167720718441,
+        "recall": 0.9973319781476305,
+        "f1": 0.9951194777207327,
+        "roc_auc": 0.99994411720685,
+        "confusion_matrix": [
+          [
+            34146,
+            112
+          ],
+          [
+            42,
+            15700
+          ]
+        ],
+        "train_f1": 0.9999471654250541
+      }
+    },
+    "best_model": "XGBoost",
+    "majority_baseline_accuracy": 0.68516,
+    "ablation_no_price_features": {
+      "accuracy": 0.71944,
+      "precision": 0.5326128320267904,
+      "recall": 0.8890865201372126,
+      "f1": 0.6661589719181342,
+      "roc_auc": 0.8281119083519375,
+      "confusion_matrix": [
+        [
+          21976,
+          12282
+        ],
+        [
+          1746,
+          13996
+        ]
+      ]
+    },
+    "importance": [
+      {
+        "Feature": "PPS_vs_City_Median",
+        "Importance": 44.469
+      },
+      {
+        "Feature": "Price_vs_City_Median",
+        "Importance": 28.935
+      },
+      {
+        "Feature": "Infra_Score",
+        "Importance": 7.875
+      },
+      {
+        "Feature": "City",
+        "Importance": 7.67
+      },
+      {
+        "Feature": "Is_Under_Construction",
+        "Importance": 4.355
+      },
+      {
+        "Feature": "Age_of_Property",
+        "Importance": 2.548
+      },
+      {
+        "Feature": "Facing",
+        "Importance": 0.468
+      },
+      {
+        "Feature": "Price_per_SqFt_Capped",
+        "Importance": 0.419
+      },
+      {
+        "Feature": "Owner_Type",
+        "Importance": 0.39
+      },
+      {
+        "Feature": "Property_Type",
+        "Importance": 0.362
+      },
+      {
+        "Feature": "Furnished_Status",
+        "Importance": 0.335
+      },
+      {
+        "Feature": "Price_in_Lakhs",
+        "Importance": 0.278
+      },
+      {
+        "Feature": "Transport_Score",
+        "Importance": 0.146
+      },
+      {
+        "Feature": "Nearby_Schools",
+        "Importance": 0.141
+      },
+      {
+        "Feature": "Parking_Flag",
+        "Importance": 0.121
+      }
+    ],
+    "threshold": 0.5
+  },
+  "regression": {
+    "results": {
+      "Linear Regression": {
+        "rmse": 12.722550393403026,
+        "mae": 9.640736168899782,
+        "r2": 0.995944127334816,
+        "mape": 6.020519913998932
+      },
+      "Random Forest": {
+        "rmse": 8.295811428273044,
+        "mae": 5.809963008780628,
+        "r2": 0.9982755377354506,
+        "mape": 1.6674583858580097
+      },
+      "XGBoost": {
+        "rmse": 7.891487394010929,
+        "mae": 5.537037986521912,
+        "r2": 0.9984395362423697,
+        "mape": 1.6414568235390867
+      }
+    },
+    "best_model": "XGBoost",
+    "fixed_rate_baseline": {
+      "rmse": 29.94230913201501,
+      "mae": 21.626837891009895,
+      "r2": 0.9775349943640017,
+      "mape": 6.292440193221516
+    },
+    "interval_90pct": {
+      "ratio_low": 0.9658453790984706,
+      "ratio_high": 1.032863080201354
+    },
+    "importance": [
+      {
+        "Feature": "Price_in_Lakhs",
+        "Importance": 59.349
+      },
+      {
+        "Feature": "Price_vs_City_Median",
+        "Importance": 38.855
+      },
+      {
+        "Feature": "City",
+        "Importance": 0.969
+      },
+      {
+        "Feature": "Is_Under_Construction",
+        "Importance": 0.24
+      },
+      {
+        "Feature": "Age_of_Property",
+        "Importance": 0.227
+      },
+      {
+        "Feature": "Price_per_SqFt_Capped",
+        "Importance": 0.13
+      },
+      {
+        "Feature": "Infra_Score",
+        "Importance": 0.093
+      },
+      {
+        "Feature": "Transport_Score",
+        "Importance": 0.033
+      },
+      {
+        "Feature": "Size_in_SqFt",
+        "Importance": 0.022
+      },
+      {
+        "Feature": "Property_Type",
+        "Importance": 0.015
+      },
+      {
+        "Feature": "Facing",
+        "Importance": 0.01
+      },
+      {
+        "Feature": "Owner_Type",
+        "Importance": 0.007
+      },
+      {
+        "Feature": "Furnished_Status",
+        "Importance": 0.007
+      },
+      {
+        "Feature": "Nearby_Hospitals",
+        "Importance": 0.005
+      },
+      {
+        "Feature": "School_Density_Score",
+        "Importance": 0.004
+      }
+    ]
+  },
+  "assumptions": {
+    "horizon_years": 5,
+    "good_investment_min_score": 3,
+    "growth_base": 0.045,
+    "growth_min": 0.03,
+    "growth_max": 0.12
+  }
+}

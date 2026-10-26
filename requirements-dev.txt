@@ -1,0 +1,11 @@
+-r requirements.txt
+# Experiment tracking and model registry (training only)
+mlflow==3.17.2
+# Plotting for the notebook and the saved evaluation figures
+matplotlib==3.10.8
+seaborn==0.13.2
+# Notebook execution
+ipykernel>=6.29
+nbformat>=5.9
+# Tests
+pytest>=8.0
