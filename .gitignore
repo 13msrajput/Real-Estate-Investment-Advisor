@@ -23,3 +23,5 @@ train_log.txt
 Thumbs.db
 .vscode/
 .idea/
+# ---------- data ----------
+data/
