@@ -1,0 +1,25 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+# ---------- Virtual environments ----------
+.venv/
+venv/
+env/
+# ---------- MLflow local stores (re-created by `python -m src.train`) ----------
+mlflow.db
+mlruns/
+mlartifacts/
+# ---------- Logs and scratch files ----------
+*.log
+train_log.txt
+# ---------- Secrets ----------
+.env
+.streamlit/secrets.toml
+# ---------- OS / editor ----------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

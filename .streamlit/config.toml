@@ -1,0 +1,75 @@
+# =====================================================================================
+# Premium theme for the Real Estate Investment Advisor
+# Two hand-tuned palettes (dark "midnight + gold" and light "ivory + deep gold").
+# Streamlit follows the viewer's system setting and users can switch from  ⋮ -> Settings.
+# Requires Streamlit >= 1.66 (tested version).
+# =====================================================================================
+
+[theme]
+# Typography: Inter for the interface, Playfair Display for headlines (loaded from Google Fonts)
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap, sans-serif"
+headingFont = "Playfair Display:https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap, serif"
+headingFontSizes = ["2.6rem", "1.9rem", "1.45rem", "1.15rem", "1rem", "0.9rem"]
+headingFontWeights = [700, 700, 700, 600, 600, 600]
+metricValueFontSize = "1.85rem"
+# Shape: soft, generous corners and visible widget borders
+baseRadius = "0.9rem"
+buttonRadius = "0.75rem"
+showWidgetBorder = true
+showSidebarBorder = true
+
+# ---------------------------------------------------------------- dark palette
+[theme.dark]
+primaryColor = "#E3B25A"
+backgroundColor = "#0B1120"
+secondaryBackgroundColor = "#111A2E"
+textColor = "#E6EAF2"
+borderColor = "#25314D"
+linkColor = "#E3B25A"
+greenColor = "#34D399"
+redColor = "#FB7185"
+blueColor = "#60A5FA"
+violetColor = "#A78BFA"
+orangeColor = "#F59E0B"
+yellowColor = "#E3B25A"
+grayColor = "#93A0B8"
+codeBackgroundColor = "#0F1830"
+dataframeBorderColor = "#25314D"
+dataframeHeaderBackgroundColor = "#16213A"
+chartCategoricalColors = ["#E3B25A", "#34D399", "#60A5FA", "#A78BFA", "#FB7185", "#F59E0B", "#2DD4BF", "#F472B6"]
+
+[theme.dark.sidebar]
+backgroundColor = "#0D1426"
+secondaryBackgroundColor = "#131D35"
+
+# ---------------------------------------------------------------- light palette
+[theme.light]
+primaryColor = "#B7791F"
+backgroundColor = "#F7F5F0"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#0F172A"
+borderColor = "#E3DDD0"
+linkColor = "#9A6414"
+greenColor = "#059669"
+redColor = "#E11D48"
+blueColor = "#2563EB"
+violetColor = "#7C3AED"
+orangeColor = "#D97706"
+yellowColor = "#B7791F"
+grayColor = "#5B6578"
+codeBackgroundColor = "#F1EDE3"
+dataframeBorderColor = "#E3DDD0"
+dataframeHeaderBackgroundColor = "#F1EDE3"
+chartCategoricalColors = ["#B7791F", "#059669", "#2563EB", "#7C3AED", "#E11D48", "#D97706", "#0D9488", "#DB2777"]
+
+[theme.light.sidebar]
+backgroundColor = "#EFEBE1"
+secondaryBackgroundColor = "#FFFFFF"
+
+# ---------------------------------------------------------------- server / browser
+[server]
+headless = true
+maxUploadSize = 5
+
+[browser]
+gatherUsageStats = false
